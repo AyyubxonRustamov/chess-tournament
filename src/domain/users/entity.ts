@@ -7,5 +7,5 @@ export class UserEntity extends BaseEntity {
   gender: GENDER_ENUM;
   email: string;
   password: string;
-  role_id: string;
+  roleId: string;
 }

@@ -6,7 +6,7 @@ export enum GENDER_ENUM {
 }
 
 export class UserDtoGroup extends CommonDtoGroup {
-
+    
 }
 
 export class UserDto extends CommonDto {
