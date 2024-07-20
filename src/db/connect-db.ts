@@ -6,6 +6,7 @@ import { RoleRepository } from "../domain/roles/repository";
 import { PlayerRepository } from "../domain/player/repository";
 import { TournamentRepository } from "../domain/tournaments/repository";
 import { TournamentParticipantRepository } from "../domain/tournament-participants/repository";
+import { MatchRepository } from "../domain/matches/repository";
 config();
 // import { }
 
@@ -15,6 +16,7 @@ const getRepositories = (pg: PoolClient | Pool): IDBRepositories => ({
   playerRepo: new PlayerRepository(pg),
   tournamentRepo: new TournamentRepository(pg),
   tournamentParticipantRepo: new TournamentParticipantRepository(pg),
+  matchRepo: new MatchRepository(pg),
 });
 
 export class PGDB implements IDB {

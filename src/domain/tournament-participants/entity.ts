@@ -4,5 +4,5 @@ export class TournamentParticipantEntity extends BaseEntity {
   tournamentId: string;
   playerId: string;
   points: number;
-  has_bye: boolean;
+  hasFullBye: boolean;
 }

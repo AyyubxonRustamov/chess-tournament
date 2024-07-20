@@ -61,7 +61,7 @@ export class TournamentParticipantDto extends CommonDto {
   @Min(0)
   points: number;
 
-  has_bye: boolean; // not for externally use
+  hasFullBye: boolean; // not for externally use
 }
 
 export class TournamentParticipantGetDto extends PagingDto<TournamentParticipantEntity> {}

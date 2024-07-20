@@ -10,6 +10,8 @@ import { ITournamentRepository } from "../domain/tournaments/repository-interfac
 import { TournamentEntity } from "../domain/tournaments/entity";
 import { ITournamentParticipantRepository } from "../domain/tournament-participants/repository-interface";
 import { TournamentParticipantEntity } from "../domain/tournament-participants/entity";
+import { IMatchRepository } from "../domain/matches/repository-interface";
+import { MatchEntity } from "../domain/matches/entity";
 
 export interface IDBRepositories {
   userRepo: IUserRepository<UserEntity>;
@@ -17,6 +19,7 @@ export interface IDBRepositories {
   playerRepo: IPlayerRepository<PlayerEntity>;
   tournamentRepo: ITournamentRepository<TournamentEntity>;
   tournamentParticipantRepo: ITournamentParticipantRepository<TournamentParticipantEntity>;
+  matchRepo: IMatchRepository<MatchEntity>;
 }
 
 export interface IWithTransaction extends IDBRepositories {

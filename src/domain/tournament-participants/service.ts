@@ -62,7 +62,7 @@ class TournamentParticipantService {
   async getPaging(paging: TournamentParticipantGetDto) {
     const data = await this.db.tournamentParticipantRepo.paging(
       { isDeleted: false },
-      ["id", "tournamentId", "playerId", "points", "has_bye"],
+      ["id", "tournamentId", "playerId", "points", "hasFullBye"],
       paging
     );
     const total = await this.db.tournamentParticipantRepo.count({
