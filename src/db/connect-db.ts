@@ -4,6 +4,7 @@ import { config } from "dotenv";
 import { UserRepository } from "../domain/users/repository";
 import { RoleRepository } from "../domain/roles/repository";
 import { PlayerRepository } from "../domain/player/repository";
+import { TournamentRepository } from "../domain/tournaments/repository";
 config();
 // import { }
 
@@ -11,6 +12,7 @@ const getRepositories = (pg: PoolClient | Pool): IDBRepositories => ({
   userRepo: new UserRepository(pg),
   roleRepo: new RoleRepository(pg),
   playerRepo: new PlayerRepository(pg),
+  tournamentRepo: new TournamentRepository(pg),
 });
 
 export class PGDB implements IDB {
