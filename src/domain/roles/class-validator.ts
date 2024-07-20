@@ -27,13 +27,13 @@ class Action {
   view: boolean;
 
   @IsBoolean({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
-  created: boolean;
+  create: boolean;
 
   @IsBoolean({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
-  updated: boolean;
+  update: boolean;
 
   @IsBoolean({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
-  deleted: boolean;
+  delete: boolean;
 }
 
 export class RoleDto extends CommonDto {
@@ -57,17 +57,17 @@ export class RoleDto extends CommonDto {
   @IsNotEmptyObject({ nullable: false }, { groups: [RoleDtoGroup.UPDATE] })
   @ValidateNested({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
   @Type(() => Action)
-  job: Action;
+  player: Action;
 
   @IsOptional({ groups: [RoleDtoGroup.UPDATE] })
   @IsNotEmptyObject({ nullable: false }, { groups: [RoleDtoGroup.UPDATE] })
   @ValidateNested({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
   @Type(() => Action)
-  skill: Action;
+  tournament: Action;
 
   @IsOptional({ groups: [RoleDtoGroup.UPDATE] })
   @IsNotEmptyObject({ nullable: false }, { groups: [RoleDtoGroup.UPDATE] })
   @ValidateNested({ groups: [RoleDtoGroup.CREATE, RoleDtoGroup.UPDATE] })
   @Type(() => Action)
-  project: Action;
+  match: Action;
 }

@@ -2,38 +2,37 @@ import { RoleEntity } from "./entity";
 import { IRole } from "./types";
 
 export function utilRole(role: IRole): RoleEntity {
-    return {
+  return {
+    title: role.title,
 
-        title: role.title,
+    /*User*/
+    user: role.user?.view,
+    userCreate: role.user?.create,
+    userUpdate: role.user?.update,
+    userDelete: role.user?.delete,
 
-        /*User*/
-        user: role.user?.view,
-        userCreated: role.user?.created,
-        userUpdated: role.user?.updated,
-        userDeleted: role.user?.deleted,
+    /*Role*/
+    role: role.role?.view,
+    roleCreate: role.role?.create,
+    roleUpdate: role.role?.delete,
+    roleDelete: role.role?.delete,
 
-        /*Job*/
-        job: role.job?.view,
-        jobCreated: role.job?.created,
-        jobUpdated: role.job?.updated,
-        jobDeleted: role.job?.deleted,
+    /*player*/
+    player: role.player?.view,
+    playerCreate: role.player?.create,
+    playerUpdate: role.player?.update,
+    playerDelete: role.player?.delete,
 
-        /*Skill*/
-        skill: role.skill?.view,
-        skillCreated: role.skill?.created,
-        skillUpdated: role.skill?.updated,
-        skillDeleted: role.skill?.deleted,
+    /*tournament*/
+    tournament: role.tournament?.view,
+    tournamentCreate: role.tournament?.create,
+    tournamentUpdate: role.tournament?.update,
+    tournamentDelete: role.tournament?.delete,
 
-        /*Project*/
-        project: role.project?.view,
-        projectCreated: role.project?.created,
-        projectUpdated: role.project?.updated,
-        projectDeleted: role.project?.deleted,
-
-        /*Role*/
-        role: role.role?.view,
-        roleCreated: role.role?.created,
-        roleUpdated: role.role?.deleted,
-        roleDeleted: role.role?.deleted,
-    }
+    /*match*/
+    match: role.match?.view,
+    matchCreate: role.match?.create,
+    matchUpdate: role.match?.update,
+    matchDelete: role.match?.delete,
+  };
 }

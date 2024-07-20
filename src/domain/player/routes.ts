@@ -8,34 +8,34 @@ import {
 } from "./controller";
 import { authUser } from "../users/authentication";
 
-export const tournamentRoutes: RouteOptions[] = [
+export const playerRoutes: RouteOptions[] = [
   {
     method: "POST",
-    url: `/tournament`,
+    url: `/player`,
     preValidation: [authUser],
     handler: create,
   },
   {
     method: "PUT",
-    url: `/tournament`,
+    url: `/player`,
     preValidation: [authUser],
     handler: update,
   },
   {
     method: "DELETE",
-    url: `/tournament/:id`,
+    url: `/player/:id`,
     preValidation: [authUser],
     handler: markDeleteById,
   },
   {
     method: "GET",
-    url: `/tournament/:id`,
+    url: `/player/:id`,
     preValidation: [authUser],
     handler: getById,
   },
   {
     method: "GET",
-    url: `/tournament`,
+    url: `/player`,
     preValidation: [authUser],
     handler: getPaging,
   },

@@ -1,42 +1,39 @@
 export interface IRole {
-    id?: string;
+  id?: string;
 
-    title: string;
+  title: string;
 
+  user: {
+    view: boolean;
+    create: boolean;
+    update: boolean;
+    delete: boolean;
+  };
+  role: {
+    view: boolean;
+    create: boolean;
+    update: boolean;
+    delete: boolean;
+  };
 
-    user: {
-        view: boolean;
-        created: boolean;
-        updated: boolean;
-        deleted: boolean;
-    };
+  player: {
+    view: boolean;
+    create: boolean;
+    update: boolean;
+    delete: boolean;
+  };
 
-    role: {
-        view: boolean;
-        created: boolean;
-        updated: boolean;
-        deleted: boolean;
-    };
+  tournament: {
+    view: boolean;
+    create: boolean;
+    update: boolean;
+    delete: boolean;
+  };
 
-    job: {
-        view: boolean;
-        created: boolean;
-        updated: boolean;
-        deleted: boolean;
-    };
-
-    skill: {
-        view: boolean;
-        created: boolean;
-        updated: boolean;
-        deleted: boolean;
-    };
-
-    project: {
-        view: boolean;
-        created: boolean;
-        updated: boolean;
-        deleted: boolean;
-    };
-
+  match: {
+    view: boolean;
+    create: boolean;
+    update: boolean;
+    delete: boolean;
+  };
 }

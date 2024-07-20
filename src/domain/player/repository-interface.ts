@@ -1,5 +1,5 @@
 import { IBaseRepository } from "../../db/repositories/interface";
 
-export interface ITournamentRepository<T> extends IBaseRepository<T> {
+export interface IPlayerRepository<T> extends IBaseRepository<T> {
     
 }
